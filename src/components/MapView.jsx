@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
@@ -20,11 +20,7 @@ export default function MapView({ coordinates }) {
     >
       <ChangeView center={position} zoom={13} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={position}>
-        <Popup>
-          Latitude: {coordinates.lat}, Longitude: {coordinates.lng}
-        </Popup>
-      </Marker>
+      <Marker position={position}></Marker>
     </MapContainer>
   );
 }

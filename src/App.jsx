@@ -3,6 +3,7 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import MapView from './components/MapView';
 import InfoPanel from './components/InfoPanel';
+import background from './assets/pattern-bg-desktop.png';
 
 import { fetchIPData } from './api/ipify';
 
@@ -43,10 +44,15 @@ function App() {
 
   return (
     <>
-      <Header />
-      <SearchBar onSearch={handleSearch} />
-      <InfoPanel data={data} />
-      <MapView coordinates={coordinates} />
+      <section>
+        <div className="absolute w-full -z-10">
+          <img src={background} alt="" className="w-full h-80" />
+        </div>
+        <Header />
+        <SearchBar onSearch={handleSearch} />
+        <InfoPanel data={data} />
+        <MapView coordinates={coordinates} />
+      </section>
     </>
   );
 }
