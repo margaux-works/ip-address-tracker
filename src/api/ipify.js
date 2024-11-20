@@ -1,35 +1,30 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_IPIFY_API_KEY; // Retrieve API key from .env file
+const IPIFY_BASE_URL = 'https://geo.ipify.org/api/v2/country,city';
 
-export const fetchIPData = async (query) => {
-  const isIPAddress = /^(([0-9]{1,3}\.){3}[0-9]{1,3})$/.test(query);
-  const isDomain =
-    /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/.test(query);
+// Regex to check if input is an IP address
+const isIPAddress = (query) => /^(([0-9]{1,3}\.){3}[0-9]{1,3})$/.test(query);
 
-  // Determine query parameter - IP or Domain
-  const queryParam = isIPAddress
-    ? `ipAddress=${query}`
-    : isDomain
-    ? `domain=${query}`
-    : '';
-
-  // Throw an error for invalid input
-  if (!queryParam) {
-    throw new Error(
-      'Invalid query. Please provide a valid IP address or domain.'
-    );
-  }
-
-  // Construct the API URL
-  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&${queryParam}`;
-
+// Function to fetch data from the IPIFY API
+export const fetchIPData = async (query = '') => {
   try {
-    // Make the API request
+    const apiKey = import.meta.env.VITE_IPIFY_API_KEY;
+
+    // Determine if the query is an IP address or a domain
+    const parameter = isIPAddress(query)
+      ? `ipAddress=${query}`
+      : `domain=${query}`;
+
+    // Build the API URL
+    const url = `${IPIFY_BASE_URL}?apiKey=${apiKey}${
+      query ? `&${parameter}` : ''
+    }`;
+
+    // Fetch data from the API
     const response = await axios.get(url);
+
     return response.data;
   } catch (error) {
-    // Log and rethrow the error
     console.error('Error fetching IP data:', error.message);
     throw error;
   }
