@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [here](https://your-solution-url.com)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/ip-address-tracker-with-react-IDgiqEoI9w)
 - Live Site URL: [here](https://margaux-works.github.io/ip-address-tracker/)
 
 ## My process
