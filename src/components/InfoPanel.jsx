@@ -8,7 +8,7 @@ export default function InfoPanel({ data }) {
         <p className="text-[#2c2c2c] text-[0.8rem] font-bold tracking-[1.75px] opacity-50">
           IP ADDRESS
         </p>
-        <p className="text-[#2c2c2c] text-[1.2rem] font-medium tracking-[-0.232px]">
+        <p className="text-[#2c2c2c] text-[1.2rem] font-bold tracking-[-0.232px]">
           {data?.ip}
         </p>
       </div>
@@ -17,7 +17,7 @@ export default function InfoPanel({ data }) {
         <p className="text-[#2c2c2c] text-[0.8rem] font-bold tracking-[1.75px] opacity-50">
           LOCATION
         </p>
-        <p className="text-[#2c2c2c] text-[1.2rem] font-medium tracking-[-0.232px]">
+        <p className="text-[#2c2c2c] text-[1.2rem] font-bold tracking-[-0.232px]">
           {data?.location?.city}, {data?.location?.region},{' '}
           {data?.location?.postalCode}
         </p>
@@ -27,7 +27,7 @@ export default function InfoPanel({ data }) {
         <p className="text-[#2c2c2c] text-[0.8rem] font-bold tracking-[1.75px] opacity-50">
           TIMEZONE
         </p>
-        <p className="text-[#2c2c2c] text-[1.2em] font-medium tracking-[-0.232px]">
+        <p className="text-[#2c2c2c] text-[1.2em] font-bold tracking-[-0.232px]">
           {data?.location?.timezone}
         </p>
       </div>
@@ -36,7 +36,7 @@ export default function InfoPanel({ data }) {
         <p className="text-[#2c2c2c] text-[0.8rem] font-bold tracking-[1.75px] opacity-50">
           ISP
         </p>
-        <p className="text-[#2c2c2c] text-[1.2rem] font-medium tracking-[-0.232px]">
+        <p className="text-[#2c2c2c] text-[1.2rem] font-bold tracking-[-0.232px]">
           {data?.isp}
         </p>
       </div>
