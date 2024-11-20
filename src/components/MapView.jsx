@@ -1,5 +1,14 @@
 import PropTypes from 'prop-types';
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
+import customPin from '../assets/icon-location.svg';
+import L from 'leaflet';
+
+const customIcon = L.icon({
+  iconUrl: customPin,
+  iconSize: [38, 50],
+  iconAnchor: [19, 50],
+  popupAnchor: [0, -45],
+});
 
 function ChangeView({ center, zoom }) {
   const map = useMap();
@@ -20,7 +29,7 @@ export default function MapView({ coordinates }) {
     >
       <ChangeView center={position} zoom={13} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <Marker position={position}></Marker>
+      <Marker position={position} icon={customIcon}></Marker>
     </MapContainer>
   );
 }
