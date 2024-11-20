@@ -16,7 +16,7 @@ export default function MapView({ coordinates }) {
     <MapContainer
       center={coordinates.lat && coordinates.lng ? position : defaultPosition}
       zoom={13}
-      style={{ height: '500px', width: '100%' }}
+      style={{ height: '100%', width: '100%' }}
     >
       <ChangeView center={position} zoom={13} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

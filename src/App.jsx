@@ -44,14 +44,25 @@ function App() {
 
   return (
     <>
-      <section>
-        <div className="absolute w-full -z-10">
-          <img src={background} alt="" className="w-full h-80" />
+      <section className="relative">
+        {/* Background Image */}
+        <div className="absolute top-0 w-full h-80 -z-10">
+          <img src={background} alt="" className="w-full h-full object-cover" />
         </div>
+
+        {/* Header and Search Bar */}
         <Header />
         <SearchBar onSearch={handleSearch} />
-        <InfoPanel data={data} />
-        <MapView coordinates={coordinates} />
+
+        {/* Info Panel */}
+        <div className="absolute top-60 left-1/2 transform -translate-x-1/2 z-20">
+          <InfoPanel data={data} />
+        </div>
+
+        {/* Map */}
+        <div className="absolute top-80 w-full h-[calc(100vh-20rem)] z-10">
+          <MapView coordinates={coordinates} />
+        </div>
       </section>
     </>
   );
