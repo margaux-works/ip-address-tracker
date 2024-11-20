@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://margaux-works.github.io/ip-address-tracker/)
+- Solution URL: [here](https://your-solution-url.com)
+- Live Site URL: [here](https://margaux-works.github.io/ip-address-tracker/)
 
 ## My process
 
