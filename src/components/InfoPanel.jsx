@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export default function InfoPanel({ data }) {
   return (
-    <div className="bg-white rounded-xl p-8 shadow max-w-6xl mx-auto grid grid-cols-1 gap-5 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:text-left -mb-10 relative lg:-mb-32">
+    <div className="bg-white rounded-xl p-8 shadow mx-auto max-w-6xl grid grid-cols-1 gap-5 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:text-left -mb-10 relative lg:-mb-32">
       {/* Column 1: IP Address */}
       <div className="text-center lg:border-r-[1px] border-black/10 h-[75px]">
         <p className="text-[#2c2c2c] text-[0.8rem] font-bold tracking-[1.75px] opacity-50">

@@ -55,7 +55,7 @@ function App() {
         <SearchBar onSearch={handleSearch} />
 
         {/* Info Panel */}
-        <div className="absolute top-60 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="absolute w-full top-60 left-1/2 transform -translate-x-1/2 z-20 px-14">
           <InfoPanel data={data} />
         </div>
 
