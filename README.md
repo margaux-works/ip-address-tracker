@@ -63,5 +63,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/margaux-works)
+- Frontend Mentor - [@margaux-works](https://www.frontendmentor.io/profile/margaux-works)
 - GitHub - [margaux-works](https://github.com/margaux-works)
